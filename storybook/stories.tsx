@@ -3,7 +3,7 @@ import ThemedDigitalClock from '../src/ThemedDigitalClock';
 import { storiesOf } from '@storybook/react';
 
 const style: React.CSSProperties = {
-  height: '95vh'
+  height: 200
 };
 
 storiesOf('ThemedDigitalClock', module)
