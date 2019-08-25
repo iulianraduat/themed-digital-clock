@@ -5,7 +5,7 @@ const style: React.CSSProperties = {
 };
 
 const DisplayAmPm: React.FC<DisplayAmPmProps> = ({ color, displayAm }) => (
-  <svg style={{ ...style, fill: color }} height="100%" viewBox="0 0 30 15">
+  <svg style={{ ...style, fill: color, height: '100%' }} viewBox="0 0 20 15">
     <text x="2" y="13" fontSize={13} fontWeight="bold">
       {displayAm ? 'AM' : 'PM'}
     </text>

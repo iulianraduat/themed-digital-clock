@@ -2,8 +2,7 @@ import * as React from 'react';
 
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
-    display: 'inline-flex',
-    height: '100%',
+    display: 'flex',
     justifyContent: 'center'
   },
   halfLower: {

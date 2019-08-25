@@ -1,6 +1,6 @@
 {
   "name": "themed-digital-clock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A digital clock with a dark and a light theme",
   "main": "lib/index.js",
   "sideEffects": false,

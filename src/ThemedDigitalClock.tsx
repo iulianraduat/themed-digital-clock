@@ -29,6 +29,7 @@ let timeoutCall: NodeJS.Timeout | undefined = undefined;
 const ThemedDigitalClock = ({
   date,
   description,
+  size,
   style,
   timezoneName,
   useDarkTheme,
@@ -123,15 +124,44 @@ const ThemedDigitalClock = ({
 
   return (
     <div style={getTheme(useDarkTheme, style)}>
-      <DigitalClock hours={hours} minutes={minutes} seconds={seconds} useDarkTheme={useDarkTheme} use24h={use24h} />
+      <DigitalClock
+        hours={hours}
+        minutes={minutes}
+        seconds={seconds}
+        useDarkTheme={useDarkTheme}
+        use24h={use24h}
+        width={size}
+        height={getHeight(size, description !== undefined)}
+      />
       <div>{description}</div>
     </div>
   );
 };
 
+const getHeight = (size: number | string | undefined, hasDescription: boolean): number | string | undefined => {
+  if (size === undefined) {
+    if (hasDescription === false) {
+      return '100%';
+    }
+
+    return `calc(100% - 1.3em)`;
+  }
+
+  if (hasDescription === false) {
+    return size;
+  }
+
+  if (typeof size === 'number') {
+    return `calc(${size}px - 1.3em)`;
+  }
+
+  return `calc(${size} - 1.3em)`;
+};
+
 export interface ThemedDigitalClockProps {
   date?: Date;
   description?: string;
+  size?: number | string;
   style?: React.CSSProperties;
   timezoneName?: string;
   useDarkTheme?: boolean;

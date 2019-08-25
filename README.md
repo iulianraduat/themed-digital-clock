@@ -18,6 +18,7 @@ The component accepts the props defined bellow in the table.
 |--------------|---------------|----------|--------------------|-------------------------------------------------------------------------|
 | date         | Date          | no       | undefined          | Force the clock to start displaying the time with the time of this date |
 | description  | string        | no       | undefined          | The text displayed bellow the clock                                     |
+| size         | number \| string   | no                 | 100%|The size of the clock                                              |
 | style        | CSSProperties | no       | {}                 | The style for root element (overwrite any internal style)               |
 | timezoneName | string        | no       | browser's timezone | The timezone for which is displayed teh time (if date is not set)       |
 | useDarkTheme | boolean       | no       | false              | Define which theme is used (light or dark)                              |
@@ -56,6 +57,7 @@ class App extends React.Component {
             title='The time now in New York'
             timezoneName='America/New_York'
             useDarkTheme={true}
+            size={400}
         />
       </div>
     );
@@ -73,3 +75,6 @@ export default App;
 
 - themed-digital-clock is made publicly available
 
+### 1.0.1
+
+- Added a prop for defining the height of the clock

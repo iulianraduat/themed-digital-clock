@@ -14,13 +14,21 @@ const styles: { [key: string]: Theme } = {
   }
 };
 
-interface Theme {
-  backgroundColor: string;
+interface Theme extends React.CSSProperties {
   digitColor: string;
 }
 
-const DigitalClock = ({ hours, minutes, seconds, useDarkTheme, use24h }: RenderDigitalClockProps): JSX.Element => {
+const DigitalClock = ({
+  height,
+  hours,
+  minutes,
+  seconds,
+  useDarkTheme,
+  use24h,
+  width
+}: RenderDigitalClockProps): JSX.Element => {
   const theme: Theme = useDarkTheme ? styles.darkTheme : styles.lightTheme;
+  const { digitColor, ...style } = theme;
 
   const isAm: boolean = hours < 12;
 
@@ -43,7 +51,7 @@ const DigitalClock = ({ hours, minutes, seconds, useDarkTheme, use24h }: RenderD
       su={renderDigit(su, theme.digitColor)}
       sl={renderDigit(sl, theme.digitColor)}
       amPm={use24h ? undefined : <DisplayAmPm displayAm={isAm} color={theme.digitColor} />}
-      style={theme}
+      style={{ ...style, width, height }}
     />
   );
 };
@@ -60,11 +68,13 @@ const renderDigit = (digit: number, color: string) => (
 type Digit = DigitalDigitProps['digit'];
 
 interface RenderDigitalClockProps {
+  height?: number | string;
   hours: number;
   minutes: number;
   seconds: number;
   useDarkTheme: boolean;
   use24h: boolean;
+  width?: number | string;
 }
 
 export default DigitalClock;
