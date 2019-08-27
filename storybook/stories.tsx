@@ -7,6 +7,7 @@ const style: React.CSSProperties = {
 };
 
 storiesOf('ThemedDigitalClock', module)
+  .addParameters({ options: { showPanel: false } })
   .add('using the light theme', () => {
     return (
       <div style={style}>
