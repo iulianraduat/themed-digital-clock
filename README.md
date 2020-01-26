@@ -32,6 +32,7 @@ Note: date is thought to be used only for testing and in storybook.
 | ThemedDigitalClock _uses_ | React  |
 |--------------------------:|:------:|
 |                     1.0.x | 16.9.0 |
+|                     1.1.x | 16.9.0 |
 
 ### About versioning schema used for ThemedDigitalClock
 
@@ -78,3 +79,8 @@ export default App;
 ### 1.0.1
 
 - Added a prop for defining the height of the clock
+
+
+### 1.1.0
+
+- Updated packages

@@ -1,6 +1,6 @@
 {
   "name": "themed-digital-clock",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A digital clock with a dark and a light theme",
   "main": "lib/index.js",
   "sideEffects": false,
@@ -33,36 +33,35 @@
   },
   "homepage": "https://github.com/iulian-radu-at/themed-digital-clock#readme",
   "dependencies": {
-    "digital-digit": "^1.0.2",
+    "digital-digit": "^1.1.0",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.26",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "moment-timezone": "^0.5.27"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@storybook/react": "^5.1.11",
+    "@babel/core": "^7.8.3",
+    "@storybook/react": "^5.3.9",
     "@types/babel-core": "^6.25.6",
-    "@types/enzyme": "^3.10.3",
+    "@types/enzyme": "^3.10.4",
     "@types/enzyme-adapter-react-16": "^1.0.5",
-    "@types/moment": "^2.13.0",
     "@types/moment-timezone": "^0.5.12",
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "@types/rimraf": "^2.0.2",
-    "@types/storybook__react": "^4.0.2",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/rimraf": "^2.0.3",
     "babel-core": "^6.26.3",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
-    "cross-env": "^5.2.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
+    "babel-preset-react-app": "^9.1.0",
+    "cross-env": "^7.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "rimraf": "^3.0.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.7.5"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "jest": {
     "modulePathIgnorePatterns": [
