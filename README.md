@@ -1,4 +1,4 @@
-# themed-digital-clock
+# themed-digital-clock ![Weekly downloads](https://img.shields.io/npm/dw/themed-digital-clock 'Weekly downloads')
 
 A digital clock with a dark and a light theme
 
@@ -14,14 +14,14 @@ The component accepts the props defined bellow in the table.
 
 ### Props accepted by ThemedDigitalClock
 
-| Name         | Type          | Required | Default            | Description                                                             |
-|--------------|---------------|----------|--------------------|-------------------------------------------------------------------------|
-| date         | Date          | no       | undefined          | Force the clock to start displaying the time with the time of this date |
-| description  | string        | no       | undefined          | The text displayed bellow the clock                                     |
-| size         | number \| string   | no                 | 100%|The size of the clock                                              |
-| style        | CSSProperties | no       | {}                 | The style for root element (overwrite any internal style)               |
-| timezoneName | string        | no       | browser's timezone | The timezone for which is displayed teh time (if date is not set)       |
-| useDarkTheme | boolean       | no       | false              | Define which theme is used (light or dark)                              |
+| Name         | Type             | Required | Default            | Description                                                             |
+| ------------ | ---------------- | -------- | ------------------ | ----------------------------------------------------------------------- |
+| date         | Date             | no       | undefined          | Force the clock to start displaying the time with the time of this date |
+| description  | string           | no       | undefined          | The text displayed bellow the clock                                     |
+| size         | number \| string | no       | 100%               | The size of the clock                                                   |
+| style        | CSSProperties    | no       | {}                 | The style for root element (overwrite any internal style)               |
+| timezoneName | string           | no       | browser's timezone | The timezone for which is displayed teh time (if date is not set)       |
+| useDarkTheme | boolean          | no       | false              | Define which theme is used (light or dark)                              |
 
 Note: date is thought to be used only for testing and in storybook.
 
@@ -30,7 +30,7 @@ Note: date is thought to be used only for testing and in storybook.
 ## Versions
 
 | ThemedDigitalClock _uses_ | React  |
-|--------------------------:|:------:|
+| ------------------------: | :----: |
 |                     1.0.x | 16.9.0 |
 |                     1.1.x | 16.9.0 |
 
@@ -47,18 +47,18 @@ Note: date is thought to be used only for testing and in storybook.
 Displaying a digital clock in a dark theme:
 
 ```js
-import * as React from "react";
-import ThemedDigitalClock from "themed-digital-clock";
+import * as React from 'react';
+import ThemedDigitalClock from 'themed-digital-clock';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <ThemedDigitalClock
-            title='The time now in New York'
-            timezoneName='America/New_York'
-            useDarkTheme={true}
-            size={400}
+          title="The time now in New York"
+          timezoneName="America/New_York"
+          useDarkTheme={true}
+          size={400}
         />
       </div>
     );
@@ -80,7 +80,11 @@ export default App;
 
 - Added a prop for defining the height of the clock
 
-
 ### 1.1.0
 
 - Updated packages
+
+### 1.1.1
+
+- Updated packages
+- Moved from npm to yarn
