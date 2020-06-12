@@ -1,4 +1,4 @@
-# themed-digital-clock ![Weekly downloads](https://img.shields.io/npm/dw/themed-digital-clock 'Weekly downloads')
+# themed-digital-clock ![Weekly downloads](https://img.shields.io/npm/dw/themed-digital-clock "Weekly downloads")
 
 A digital clock with a dark and a light theme
 
@@ -47,8 +47,8 @@ Note: date is thought to be used only for testing and in storybook.
 Displaying a digital clock in a dark theme:
 
 ```js
-import * as React from 'react';
-import ThemedDigitalClock from 'themed-digital-clock';
+import * as React from "react";
+import ThemedDigitalClock from "themed-digital-clock";
 
 class App extends React.Component {
   render() {
@@ -88,3 +88,7 @@ export default App;
 
 - Updated packages
 - Moved from npm to yarn
+
+### 1.1.2
+
+- Updated packages
