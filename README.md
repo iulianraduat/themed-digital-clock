@@ -92,3 +92,7 @@ export default App;
 ### 1.1.2
 
 - Updated packages
+
+### 1.1.3
+
+- Updated packages
