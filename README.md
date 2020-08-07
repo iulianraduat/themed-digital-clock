@@ -55,7 +55,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ThemedDigitalClock
-          title="The time now in New York"
+          description="The time now in New York"
           timezoneName="America/New_York"
           useDarkTheme={true}
           size={400}
@@ -96,3 +96,7 @@ export default App;
 ### 1.1.3
 
 - Updated packages
+
+### 1.1.4
+
+- Fixed crash produced by "export \* from"
