@@ -1,4 +1,4 @@
-# themed-digital-clock ![Weekly downloads](https://img.shields.io/npm/dw/themed-digital-clock "Weekly downloads")
+# themed-digital-clock ![Weekly downloads](https://img.shields.io/npm/dw/themed-digital-clock 'Weekly downloads')
 
 A digital clock with a dark and a light theme
 
@@ -29,10 +29,11 @@ Note: date is thought to be used only for testing and in storybook.
 
 ## Versions
 
-| ThemedDigitalClock _uses_ | React  |
-| ------------------------: | :----: |
-|                     1.0.x | 16.9.0 |
-|                     1.1.x | 16.9.0 |
+| ThemedDigitalClock _uses_ |      React       |
+| ------------------------: | :--------------: |
+|                     1.0.x |      16.9.0      |
+|                     1.1.x |      16.9.0      |
+|                     1.2.x | 16.9.0 or 17.0.0 |
 
 ### About versioning schema used for ThemedDigitalClock
 
@@ -47,8 +48,8 @@ Note: date is thought to be used only for testing and in storybook.
 Displaying a digital clock in a dark theme:
 
 ```js
-import * as React from "react";
-import ThemedDigitalClock from "themed-digital-clock";
+import * as React from 'react';
+import ThemedDigitalClock from 'themed-digital-clock';
 
 class App extends React.Component {
   render() {
@@ -100,3 +101,8 @@ export default App;
 ### 1.1.4
 
 - Fixed crash produced by "export \* from"
+
+### 1.2.0
+
+- Accepting React 17 as peerDependencies
+- Fixed security warnings
