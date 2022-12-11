@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export interface ThemedDigitalClockProps extends React.Props<ThemedDigitalClock> {
+export interface ThemedDigitalClockProps {
   date?: Date;
   description?: string;
   size?: number | string;

@@ -34,6 +34,7 @@ Note: date is thought to be used only for testing and in storybook.
 |                     1.0.x |      16.9.0      |
 |                     1.1.x |      16.9.0      |
 |                     1.2.x | 16.9.0 or 17.0.0 |
+|                     2.0.x |     >=18.0.0     |
 
 ### About versioning schema used for ThemedDigitalClock
 
@@ -110,3 +111,7 @@ export default App;
 ### 1.2.1
 
 - Updated the packages
+
+### 2.0.0
+
+- Supports minimum React 18
