@@ -1,27 +1,30 @@
-import * as moment from 'moment-timezone';
-import * as React from 'react';
+import moment from 'moment-timezone';
+import React from 'react';
 import DigitalClock from './DigitalClock';
 
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
     height: '100%',
     width: '100%',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   darkTheme: {
     backgroundColor: '#222222',
-    color: '#7fffd4'
+    color: '#7fffd4',
   },
   lightTheme: {
     backgroundColor: '#ffffff',
-    color: '#000000'
-  }
+    color: '#000000',
+  },
 };
 
-const getTheme = (useDarkTheme: boolean, style: React.CSSProperties = {}): React.CSSProperties => ({
+const getTheme = (
+  useDarkTheme: boolean,
+  style: React.CSSProperties = {}
+): React.CSSProperties => ({
   ...styles.container,
   ...(useDarkTheme ? styles.darkTheme : styles.lightTheme),
-  ...style
+  ...style,
 });
 
 let timeoutCall: NodeJS.Timeout | undefined = undefined;
@@ -33,13 +36,19 @@ const ThemedDigitalClock = ({
   style,
   timezoneName,
   useDarkTheme,
-  use24h = false
+  use24h = false,
 }: ThemedDigitalClockProps): JSX.Element => {
   const [hours, setHours] = React.useState<number>(date ? date.getHours() : -1);
-  const [minutes, setMinutes] = React.useState<number>(date ? date.getMinutes() : -1);
-  const [seconds, setSeconds] = React.useState<number>(date ? date.getSeconds() : -1);
+  const [minutes, setMinutes] = React.useState<number>(
+    date ? date.getMinutes() : -1
+  );
+  const [seconds, setSeconds] = React.useState<number>(
+    date ? date.getSeconds() : -1
+  );
 
-  const resolvedTimezoneName = timezoneName ? timezoneName : Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const resolvedTimezoneName = timezoneName
+    ? timezoneName
+    : Intl.DateTimeFormat().resolvedOptions().timeZone;
   let timeoutCall: NodeJS.Timeout;
 
   if (date) {
@@ -47,7 +56,8 @@ const ThemedDigitalClock = ({
       (crtHours: number, crtMinutes: number, crtSeconds: number) => {
         const newSeconds = (crtSeconds + 1) % 60;
         const newMinutes = newSeconds == 0 ? (crtMinutes + 1) % 60 : crtMinutes;
-        const newHours = newSeconds == 0 && newMinutes == 0 ? (crtHours + 1) % 24 : crtHours;
+        const newHours =
+          newSeconds == 0 && newMinutes == 0 ? (crtHours + 1) % 24 : crtHours;
         setHours(newHours);
         setMinutes(newMinutes);
         setSeconds(newSeconds);
@@ -120,7 +130,9 @@ const ThemedDigitalClock = ({
   }
 
   useDarkTheme = useDarkTheme === true;
-  description = description ? description.replace('{}', resolvedTimezoneName) : undefined;
+  description = description
+    ? description.replace('{}', resolvedTimezoneName)
+    : undefined;
 
   return (
     <div style={getTheme(useDarkTheme, style)}>
@@ -138,7 +150,10 @@ const ThemedDigitalClock = ({
   );
 };
 
-const getHeight = (size: number | string | undefined, hasDescription: boolean): number | string | undefined => {
+const getHeight = (
+  size: number | string | undefined,
+  hasDescription: boolean
+): number | string | undefined => {
   if (size === undefined) {
     if (hasDescription === false) {
       return '100%';
